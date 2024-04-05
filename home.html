@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <script>
+            function generateMailtoLink() {
+                var subject = document.getElementById('subjectInput').value;
+                var body = document.getElementById('bodyInput').value;
+                var mailtoLink ='mailto:example@kiwiorbit.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+                window.location.href = mailtoLink;
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">My Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>This is my about page and it's written in HTML</p>
+            <img src="./VPLv2_0.jpg" alt="Keybinds">
+        </section>
+        <section id="projects">
+            <h2>My Projects</h2>
+                <ul>
+                    <li>
+                        <h3>Project Numero Uno</h3>
+                        <p>This is the first project</p>
+                        <a href="https://mealteamsixnz.github.io">Click here for the first project</a>
+                    </li>
+                    <li>
+                        <h3>Project Nummer Zwei</h3>
+                        <p>This is the second project</p>
+                        <a href="https://facebook.com">Click here to waste your time.</a>
+                    </li>
+                </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+                <form id="emailForm">
+                    <label for="subjectInput">Subject:</label>
+                    <input type="text" id="subjectInput" name="subject"><br><br>
+                    <label for="bodyInput">Body:</label>
+                    <textarea id="bodyInput" name="body"></textarea><br><br>
+                    <button type="button" onclick="generateMailtoLink()">Send Email</button>
+                </form>
+        </section>
+    </body>
+    <footer>
+        <p>My Portfolio - circa today &copy;</p>
+    </footer>
+</html>
